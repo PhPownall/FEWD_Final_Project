@@ -1,0 +1,141 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+ul.navBar {
+  padding: 0px;
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hamburger .line{
+  width: 50px;
+  height: 5px;
+  background-color: black;
+  display: block;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger:hover{
+  cursor: pointer;
+}
+.is-active{
+  transform: rotate(90deg);
+}
+
+.is-active .line:nth-child(2){
+  transition: none;
+}
+
+.is-active .line:nth-child(2){
+  transition-delay: 0.3s;
+}
+
+.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+.is-active .line:nth-child(1),
+.is-active .line:nth-child(3){
+  width: 35px;
+  transform-origin: right;
+}
+
+.is-active .line:nth-child(1){
+  transform: translateY(15px) rotate(45deg);
+}
+
+.is-active .line:nth-child(3){
+  transform: translateY(-15px) rotate(-45deg);
+}
+.headingOne {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0px 10px 0px 0px;
+}
+
+/* slide in menu */
+.menu {
+  background-color: white;
+  top: 0;
+  height: 400px;
+  width: 200px;
+  opacity: 1;
+  border-right: 1px solid grey;
+  padding: 15px 30px;
+  position: fixed;
+  transition: all 0.55s ease-in-out;
+  transform: translateY(-200%);
+  z-index: 10;
+}
+.menu-open {
+  transform: translateX(0%) translateY(19%);
+  opacity: 1;
+}
+.menu a {
+  color: black;
+  display: block;
+  font-size: 20px;
+  margin: 25px auto;
+  text-align: left;
+  text-decoration: none;
+}
+.menu a:hover {
+  display: block;
+  font-size: 20px;
+  margin: 25px auto;
+  text-align: center;
+  text-decoration: line-through;
+  transition: all 0.55s ease-in-out;
+}
+
+.feelgood {
+  font-weight: bold;
+  text-align: center;
+  max-width: 1000px;
+  display: none;
+  margin: 0 auto;
+  padding: 0px 0px 10px 0px;
+}
+
+/* Second Section */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 100px;
+}
+.aboutInfo {
+  display: flex;
+
+  justify-content: space-between;
+}
+img {
+  height: 500px;
+  width: 300px
+  padding: 100px;
+}
+.aboutInfo p {
+  padding-left: 10px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+footer img {
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+}
