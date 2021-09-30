@@ -1,43 +1,100 @@
-console.log("testing");
-console.log("you are awesome");
+// hambuger menu
 const hamburgerId = document.getElementById('hamburgerId');
 const hamburgerClass = document.querySelector('.hamburger');
 
-// hambuger menu
 hamburgerId.addEventListener('click',arrowAnimation);
-
 function arrowAnimation() {
   hamburgerId.classList.toggle('is-active');
   document.querySelector('.menu').classList.toggle('menu-open');
 }
 
 // modals
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var imgOne = document.getElementById("myImgOne");
-var imgTwo = document.getElementById("myImgTwo");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption01");
+const modalOne = document.querySelector('#myModalOne');
+const imgOne = document.querySelector('#imgOne');
+const closeOne = document.querySelector('#closeOne');
+imgOne.onclick = function() {
+  modalOne.style.display = 'block';
+};
+closeOne.onclick = function() {
+  modalOne.style.display = "none";
+};
 
+const modalTwo = document.querySelector('#myModalTwo');
+const imgTwo = document.querySelector('#imgTwo');
+const closeTwo = document.querySelector('#closeTwo');
+imgTwo.onclick = function() {
+  modalTwo.style.display = 'block';
+};
+closeTwo.onclick = function() {
+modalTwo.style.display = "none";
+};
 
-imgOne.onclick = function(){
-  modal.style.display = "block";
-  captionText = this.alt;
-  modalImg.src = this.src;
-}
-var captionTextTwo = document.getElementById("caption02");
-console.log(captionTextTwo);
+const modalThree = document.querySelector('#myModalThree');
+const imgThree = document.querySelector('#imgThree');
+const closeThree = document.querySelector('#closeThree');
+imgThree.onclick = function() {
+  modalThree.style.display = 'block';
+};
+closeThree.onclick = function() {
+modalThree.style.display = "none";
+};
 
-imgTwo.onclick = function(){
-  modal.style.display = "block";
-  captionTextTwo = this.alt;
-  modalImg.src = this.src;
-}
+const modalFour = document.querySelector('#myModalFour');
+const imgFour = document.querySelector('#imgFour');
+const closeFour = document.querySelector('#closeFour');
+imgFour.onclick = function() {
+  modalFour.style.display = 'block';
+};
+closeFour.onclick = function() {
+modalFour.style.display = "none";
+};
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+const modalFive = document.querySelector('#myModalFive');
+const imgFive = document.querySelector('#imgFive');
+const closeFive = document.querySelector('#closeFive');
+imgFive.onclick = function() {
+  modalFive.style.display = 'block';
+};
+closeFive.onclick = function() {
+modalFive.style.display = "none";
+};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+const modalSix = document.querySelector('#myModalSix');
+const imgSix = document.querySelector('#imgSix');
+const closeSix = document.querySelector('#closeSix');
+imgSix.onclick = function() {
+  modalSix.style.display = 'block';
+};
+closeSix.onclick = function() {
+modalSix.style.display = "none";
+};
+
+const modalSeven = document.querySelector('#myModalSeven');
+const imgSeven = document.querySelector('#imgSeven');
+const closeSeven = document.querySelector('#closeSeven');
+imgSeven.onclick = function() {
+  modalSeven.style.display = 'block';
+};
+closeSeven.onclick = function() {
+modalSeven.style.display = "none";
+};
+
+const modalEight = document.querySelector('#myModalEight');
+const imgEight = document.querySelector('#imgEight');
+const closeEight = document.querySelector('#closeEight');
+imgEight.onclick = function() {
+  modalEight.style.display = 'block';
+};
+closeEight.onclick = function() {
+modalEight.style.display = "none";
+};
+
+const modalNine = document.querySelector('#myModalNine');
+const imgNine = document.querySelector('#imgNine');
+const closeNine = document.querySelector('#closeNine');
+imgNine.onclick = function() {
+  modalNine.style.display = 'block';
+};
+closeNine.onclick = function() {
+modalNine.style.display = "none";
+};

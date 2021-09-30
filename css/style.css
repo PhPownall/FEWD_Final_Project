@@ -1,9 +1,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif;
 }
-
 nav {
   max-width: 1000px;
   margin: 0 auto;
@@ -30,38 +28,37 @@ ul.navBar {
 .is-active{
   transform: rotate(90deg);
 }
-
 .is-active .line:nth-child(2){
   transition: none;
 }
-
 .is-active .line:nth-child(2){
   transition-delay: 0.3s;
 }
-
 .is-active .line:nth-child(2){
   opacity: 0;
 }
-
 .is-active .line:nth-child(1),
 .is-active .line:nth-child(3){
   width: 35px;
   transform-origin: right;
 }
-
 .is-active .line:nth-child(1){
   transform: translateY(15px) rotate(45deg);
 }
-
 .is-active .line:nth-child(3){
   transform: translateY(-15px) rotate(-45deg);
 }
 .headingOne {
-  font-size: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
   font-weight: bold;
   padding: 0px 10px 0px 0px;
+  cursor: pointer;
 }
-
+.headingOne:hover {
+  text-decoration: line-through;
+  transition: all 0.55s ease-in-out;
+}
 /* slide in menu */
 .menu {
   background-color: white;
@@ -72,7 +69,7 @@ ul.navBar {
   border-right: 1px solid grey;
   padding: 15px 30px;
   position: fixed;
-  transition: all 0.55s ease-in-out;
+  transition: all 0.75s ease-in-out;
   transform: translateY(-200%);
   z-index: 10;
 }
@@ -83,6 +80,7 @@ ul.navBar {
 .menu a {
   color: black;
   display: block;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   margin: 25px auto;
   text-align: left;
@@ -96,16 +94,14 @@ ul.navBar {
   text-decoration: line-through;
   transition: all 0.55s ease-in-out;
 }
-
 .feelgood {
-  font-weight: bold;
+  font-size: 20px;
   text-align: center;
   max-width: 1000px;
-  display: none;
   margin: 0 auto;
   padding: 0px 0px 10px 0px;
+  transition: all 0.1s ease-in-out;
 }
-
 /* Second Section */
 main {
   max-width: 1000px;
@@ -119,16 +115,21 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat (8 1fr);
   grid-gap: 5px;
-  /* position: relative; */
 }
 .recipe {
   position: relative;
 }
-img {
+.recipe_container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.recipe_container img:hover {
+  opacity: 0.7;
 }
 .frenchToast {
   grid-column: 1/3;
@@ -158,99 +159,44 @@ img {
   grid-column: 1/3;
   grid-row: ;
 }
+#imgOne:hover + .title {
+  visibility: visible;
+}
+#imgTwo:hover + .title {
+  visibility: visible;
+}
+#imgThree:hover + .title {
+  visibility: visible;
+}
+#imgFour:hover + .title {
+  visibility: visible;
+}
+#imgFive:hover + .title {
+  visibility: visible;
+}
+#imgSix:hover + .title {
+  visibility: visible;
+}
+#imgSeven:hover + .title {
+  visibility: visible;
+}
+#imgEight:hover + .title {
+  visibility: visible;
+}
+#imgNine:hover + .title {
+  visibility: visible;
+}
 .title {
+  visibility: hidden;
   font-size: 30px;
-  color: white;
+  color: black;
   position: absolute;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 5px;
   bottom: 0px;
-  left: 10px;
+  left: 0px;
   padding: 3px;
 }
-
-/* Modals */
-/* Style the Image Used to Trigger the Modal */
-#myImgOne, #myImgTwo{
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImgOne:hover,
-#myImgTwo:hover
-{opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption01 {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
+/* Footer */
 footer {
   display: flex;
   align-items: center;
@@ -263,4 +209,151 @@ footer img {
   height: 40px;
   width: 40px;
   padding: 10px;
+}
+/* Modals */
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 700px;
+}
+.caption {
+  margin: auto;
+  display: block;
+  width: 50%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.modal-content, .caption, .recipe-card {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.recipe-card img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+.recipe-card {
+	background: #fff;
+	margin: 4em auto;
+	width: 90%;
+	max-width: 496px;
+	border-radius: 5px;
+}
+aside {
+		position: relative;
+}
+aside img {
+  border-radius: 5px 5px 0px 0px;
+}
+article {
+		padding: 1.25em 1.5em;
+}
+ul {
+		list-style: none;
+		margin: 0.5em 0 0;
+		padding: 0;
+}
+li {
+		display: inline-block;
+		margin-left: 1em;
+		line-height: 1em;
+}
+li:first-child {
+		margin-left: 0;
+}
+.icon {
+		vertical-align: bottom;
+}
+span:nth-of-type(2) {
+		margin-left: 0.5em;
+		font-size: 0.8em;
+		font-weight: 300;
+		vertical-align: middle;
+		color: #838689;
+}
+h2, h3 {
+		margin: 0;
+		font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
+}
+h2 {
+		font-size: em(28);
+		color: #222222;
+    font-family: 'Cormorant Garamond', serif;
+}
+h3 {
+		font-size: em(15);
+		color: #838689;
+}
+p {
+		margin: 1.25em 0;
+		font-size: em(13);
+    font-weight: 300;
+		color: #222222;
+    font-family: 'Lato', sans-serif;
+}
+span {
+		font-weight: 700;
+		color: #000000;
+}
+.ingredients {
+			margin: 2em 0 0.5em;
+}
+.icon {
+	    display: inline;
+	    display: inline-block;
+	    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/recipe-card-icons.svg);
+	    background-repeat: no-repeat;
+	}
+.icon-calories,.icon-calories\:regular {
+	    background-position: 0 0;
+      color: pink;
+	    width: 16px;
+	    height: 19px;
+}
+.icon-clock,.icon-clock\:regular {
+	    background-position: 0 -19px;
+	    width: 20px;
+	    height: 20px;
+}
+.icon-users,.icon-users\:regular {
+	    background-position: 0 -84px;
+	    width: 18px;
+	    height: 18px;
 }

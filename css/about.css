@@ -3,10 +3,14 @@
   box-sizing: border-box;
   font-family: 'Noto Sans', sans-serif;
 }
-
+.navigation {
+  background-color: white;
+  width: 100%;
+}
 nav {
   max-width: 1000px;
   margin: 0 auto;
+  background-color: white;
 }
 ul.navBar {
   padding: 0px;
@@ -30,38 +34,36 @@ ul.navBar {
 .is-active{
   transform: rotate(90deg);
 }
-
 .is-active .line:nth-child(2){
   transition: none;
 }
-
 .is-active .line:nth-child(2){
   transition-delay: 0.3s;
 }
-
 .is-active .line:nth-child(2){
   opacity: 0;
 }
-
 .is-active .line:nth-child(1),
 .is-active .line:nth-child(3){
   width: 35px;
   transform-origin: right;
 }
-
 .is-active .line:nth-child(1){
   transform: translateY(15px) rotate(45deg);
 }
-
 .is-active .line:nth-child(3){
   transform: translateY(-15px) rotate(-45deg);
 }
 .headingOne {
-  font-size: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
   font-weight: bold;
   padding: 0px 10px 0px 0px;
 }
-
+.headingOne:hover {
+  text-decoration: line-through;
+  transition: all 0.55s ease-in-out;
+}
 /* slide in menu */
 .menu {
   background-color: white;
@@ -82,6 +84,7 @@ ul.navBar {
 }
 .menu a {
   color: black;
+  font-family: 'Cormorant Garamond', serif;
   display: block;
   font-size: 20px;
   margin: 25px auto;
@@ -96,35 +99,62 @@ ul.navBar {
   text-decoration: line-through;
   transition: all 0.55s ease-in-out;
 }
-
 .feelgood {
-  font-weight: bold;
   text-align: center;
   max-width: 1000px;
-  display: none;
+  display: block;
   margin: 0 auto;
   padding: 0px 0px 10px 0px;
 }
-
-/* Second Section */
+/* Main Content */
+.maincontent {
+  width: 100%;
+  background-color: #F5F5F5;
+}
 main {
   max-width: 1000px;
   margin: 0 auto;
-  height: 100%;
-  padding-bottom: 100px;
+  /* height: 100%; */
+  padding: 20px 0 0 0;
 }
-.aboutInfo {
+.about-info {
   display: flex;
-
-  justify-content: space-between;
+	background: #fff;
+	/* margin: 4em auto; */
+	width: 100%;
+	max-width: 1000px;
+	border-radius: 5px;
 }
-img {
+aside {
+		position: relative;
+}
+aside img {
+  border-radius: 5px;
   height: 500px;
-  width: 300px
+  width: 500px
   padding: 100px;
 }
-.aboutInfo p {
-  padding-left: 10px;
+article {
+		padding: 0 0 0 1.5em;
+}
+h2, h3 {
+		margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+h2 {
+		font-size: em(28);
+		color: #222222;
+}
+h3 {
+		font-size: em(15);
+		color: #838689;
+}
+p {
+		margin: 1.25em 0;
+    font-family: 'Lato', sans-serif;
+		font-size: em(13);
+		font-weight: 300;
+		color: #222222;
 }
 footer {
   display: flex;
